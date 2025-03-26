@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and Event Handling Tasks</title>
+        
+    <link rel="stylesheet" href="hello.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>DOM and Event Handling Tasks</h1>
+
+        <!-- Task 1: Click Me Button -->
+        <button id="clickMeBtn">Click Me</button>
+
+        <!-- Task 2: Input Field and Submit Button -->
+        <div class="form-group">
+            <input type="text" id="inputField" placeholder="Enter text">
+            <button id="submitButton">Submit</button>
+        </div>
+        <span>Entered Text:</span><p id="outputParagraph">-</p>
+
+    
+        
+<button id="updateButton">Update Text</button>
+
+
+<p id="outputParagraph">-</p>
+
+<script>
+  document.getElementById('updateButton').addEventListener('click', function() {
+    var enteredText = document.getElementById('inputField').value;
+    document.getElementById('outputParagraph').innerText = enteredText || '-';
+  });
+</script>
+
+
+
+        <!-- Task 3: List with Delete Buttons -->
+        <ul id="itemList">
+            <li>Item 1 <button id="1" class="deleteBtn">Delete</button></li>
+            <li>Item 2 <button id="2" class="deleteBtn">Delete</button></li>
+            <li>Item 3 <button id="3" class="deleteBtn">Delete</button></li>
+        </ul>
+
+
+        <!-- <script>
+            // Find the delete button with id "1"
+            const deleteButton = document.getElementById("1");
+    
+            // Add an event listener for the click event
+            deleteButton.addEventListener("click", function() {
+                // Find the parent list item of the button and remove it
+                const itemToDelete = deleteButton.parentElement;
+                itemToDelete.remove();
+            });
+        </script> -->
+    
+
+
+
+     <script>
+        // Select all delete buttons
+        const deleteButtons = document.querySelectorAll(".deleteBtn");
+
+        // Add event listener to each button
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                // Find the parent list item of the clicked button and remove it
+                const itemToDelete = button.parentElement;
+                itemToDelete.remove();
+            });
+        });
+    </script>
+
+
+
+
+
+        <!-- Task 4: Dropdown Select and Color Div -->
+        
+       
+    <div class="form-group">
+        <select id="colorSelect">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <span>Selected Color:</span><div id="colorDiv"></div>
+    </div>
+
+    <script>
+        // Get the select element and the color div
+        const colorSelect = document.getElementById('colorSelect');
+        const colorDiv = document.getElementById('colorDiv');
+
+        // Event listener to update the colorDiv when a color is selected
+        colorSelect.addEventListener('change', function() {
+            const selectedColor = colorSelect.value; // Get the selected color
+            colorDiv.style.backgroundColor = selectedColor; // Update colorDiv background
+        });
+    </script>
+
+
+
+
+
+        <!-- Task 5: Toggle Button and Hidden Div -->
+        <div class="form-group">
+            <button id="toggleBtn">Toggle</button>
+            <div id="toggleDiv" class="hidden">
+                This div will be toggled.
+            </div>
+        </div>
+
+
+        <script>
+            // Get the button and the div
+            const toggleBtn = document.getElementById('toggleBtn');
+            const toggleDiv = document.getElementById('toggleDiv');
+        
+            // Add event listener to the button
+            toggleBtn.addEventListener('click', function() {
+                // Toggle the 'hidden' class on the div
+                toggleDiv.classList.toggle('hidden');
+            });
+        </script>
+
+
+
+
+
+
+        <!-- Task 6: Counter Button -->
+                
+            <div class="form-group">
+                <button id="incrementBtn">Increment</button>
+                <p id="counterText">Counter: 0</p>
+            </div>
+
+
+        
+            <script>
+                // Get references to the button and the text paragraph
+                const incrementBtn = document.getElementById('incrementBtn');
+                const counterText = document.getElementById('counterText');
+        
+                // Initialize the counter
+                let counter = 0;
+        
+                // Add event listener to the button to increment the counter
+                incrementBtn.addEventListener('click', function() {
+                    counter++;  // Increment the counter
+                    counterText.textContent = 'Counter: ' + counter;  // Update the text
+                });
+            </script>
+        
+        
+
+
+
+
+        <!-- Task 7: Form Validation -->
+        <form id="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="errorText"></p>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+
+</html> 

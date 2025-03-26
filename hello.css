@@ -1,0 +1,113 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 100px);
+    margin-right: 10px;
+}
+
+/* List item styling */
+li {
+    margin-bottom: 10px;
+}
+
+/* Select styling */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Color div styling */
+#colorDiv {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+/* Hidden class for toggling */
+.hidden {
+    display: none;
+}
+
+/* Error message styling */
+#errorText {
+    margin-top: 10px;
+    color: red;
+}
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Form label styling */
+label {
+    margin-right: 10px;
+}
+
+/* Form button styling */
+form button {
+    background-color: #28a745;
+}
+
+/* Form button hover styling */
+form button:hover {
+    background-color: #218838;
+}
+
+#toggleBtn, #incrementBtn {
+    margin: 10px;
+}
